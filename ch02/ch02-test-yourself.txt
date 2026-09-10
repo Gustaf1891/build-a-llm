@@ -1,0 +1,58 @@
+2.0 Quick questions on main concepts
+    1. What is the primary purpose of tokenization in the context of LLMs?
+    B. Tokenization splits text into individual words or special characters
+
+    2. What is the purpose of the <|unk|> token in a vocabulary used for LLMs?
+    C. The <|unk|> token represents unknown words that were not present in the training data.
+
+    3. What is the primary task of an LLM during training?
+    D. LLMs are trained to predict the next word in a sequence, given a preceding context.
+
+    4. What is the difference between absolute positional embeddings and relative positional embeddings?
+    A. Absolute positional embeddings encode the exact position of a token in a sequence, while relative positional embeddings encode the relative distance between tokens
+
+    5. The purpose of ____________ in the context of LLMs is to provide information about the order and location of tokens within a sequence, 
+    helping the LLM understand the relationships between words.
+    B. Positional embeddings
+
+    6. What is the final output of the input processing pipeline for an LLM, before it is fed into the main LLM layers?
+    C. The final output is a tensor of input embeddings, created by combining token embeddings and positional embeddings.
+
+2.1 Understanding word embeddings
+    1. Why are word embeddings necessary for processing text data in deep learning models?
+    A. Since neural networks can't process text, video, or sound data (etc...) it's converted into vector embeddings, allowing for the model to apply mathematical operations.
+
+    2. What is the main idea behind the Word2Vec approach to generating word embeddings?
+    A. To go from word to vector and vice versa. Since the models don't operate on characters/words they can do the work using the vector embeddings and then go back to the words when
+    generating text. 
+
+    3. Explain the trade-off involved in choosing the dimensionality of word embeddings.
+    A. A lower dimensionality is faster but makes capturing similarities between words harder. For example a cat can be close (and by so similar) to an ape if the dimensionality
+    is too low. A higher dimensionality captures more complex relationships but is slower.
+
+    4. How do LLMs typically handle word embeddings compared to using pretrained models like Word2Vec?
+    A. They create their own embeddings which are updated during training. This can also allow for more optimized and contextualized embeddings. 
+
+    5. What is the primary challenge associated with visualizing highdimensional word embeddings?
+    A. That humans are unable to grasp dimensions higher than 3D which heavily lowers the visuality of the embedding space. 
+
+2.2 Tokenizing text
+    1. What is the purpose of tokenizing text in the context of building a large language model?
+    A. Splitting the text into smaller words and/or phrase tokens which are integer IDs. 
+
+    2. Describe the process of tokenizing text using Python's regular expression library 're'.
+    A. Import re -> read text and save into a vairable -> re.split on special characters -> remove whitespaces
+
+    3. Why is it important to consider capitalization when tokenizing text for LLM training?
+    A. Since capitalization means that the words is either the first in a sentence or a name. Which is important for context.
+
+    4. Explain the trade-off between removing whitespaces during tokenization and keeping them.
+    A. Removing whitespace shortens the vector and speeds up calculations, but loses the ability to work on text when the whitespace is important e.g. coding. 
+
+    5. Match the term on the left to its description on the right:
+    A. Word Embeddings - A method of representing words as continuous-valued vectors, allowing deep learning models to process text data.
+    A. Embedding -- The process of converting various data types, such as text, audio, or video, into a dense vector representation that deep learning models can understand.
+    A. Word2Vec -- An algorithm that generates word embeddings by predicting the context of a word given the target word or vice versa, based on the idea that words appearing in similar contexts tend to have similar meanings.
+    A. Embeddings Size -- The dimensionality of a word embedding, which determines the number of dimensions used to represent each word, influencing the complexity and computational efficiency of the model.
+
+2.3 Converting tokens into token IDs
