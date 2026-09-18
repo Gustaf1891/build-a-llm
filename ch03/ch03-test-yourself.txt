@@ -1,0 +1,22 @@
+Quick Questions on main concepts
+    1. What is the main problem with using traditional encoder-decoder RNN architectures for language translation, especially when dealing with long sentences?
+    A. RNNs struggle to retain context from earlier parts of the input sequence due to the reliance on a single hidden state
+
+    2. What is the purpose of the "query" vector in self-attention?
+    C. The query vector represents the current element in the sequence that the model is focusing on and is used to probe the other elements for relevance.
+
+    3. What is the primary function of an attention mechanism in a language model?
+    D. To selectively focus on specific parts of the input sequence. 
+
+    4. The main advantage of using multiple attention heads in a ____________ attention mechanism is to allow the model to attend to different aspects of the input sentence
+       simultaneously, improving its ability to capture complex relationships. 
+    A. multi-head attention
+
+    5. The purpose of ____________ in the attention mechanism is to randomly drop out attention weights during training, preventing the model from becoming overly reliant on specific connections.
+    A. dropout
+
+    6. The ____________ class integrates the multi-head functionality within a single class, while the MultiHeadAttentionWrapper class uses a list to separate CausalAttention objects.
+    B. MultiHeadAttention
+
+    7. What is the purpose of the output projection layer in the MultiHeadAttention class?
+    A. To transform the combined output of the attention heads into a desired output dimension. 
