@@ -1,0 +1,26 @@
+Quick questions on main concepts:
+    1. What is the purpose of the context_length parameter in the GPT_CONFIG_124M dictionary?
+    D. It denotes the maximum number of input tokens the model can handle via the positional embeddings.
+
+    2. The primary purpose of layer normalization in a GPT model is to adjust the activations of a neural network 
+    layer to have a mean of 0 and a ____________ of 1.
+    A. variance
+
+    3. What is the main advantage of layer normalization over batch normalization in LLMs?
+    C. Layer normalization is computationally more efficient than batch normalization.
+    Wrong. Correct answer:
+    B. Layer normalization normalizes each input independently of the batch size
+    
+
+    4. Which activation function is commonly used in LLMs like GPT-2, offering a smoother alternative to ReLU?
+    B. GELU (Gaussian Error Linear Unit)
+
+    5. What is the primary purpose of shortcut connections in a deep neural network?
+    B. To preserve the flow of gradients during the backward pass in training.
+
+    6. What are the main components of a transformer block in a GPT model?
+    C. Multi-head attention, layer normalization, dropout, feed forward layers, and GELU activations.
+
+    7. What is the primary reason why the GPT model generates gibberish when it is not trained?
+    C. The model has not learned the relationships between words and patterns in language.
+
