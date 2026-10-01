@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.utils.data import Dataset
 
 class MultiHeadAttention(nn.Module):
     def __init__(self, d_in, d_out, context_length, dropout, num_heads, qkv_bias=False):
@@ -154,3 +155,26 @@ class GPTModel(nn.Module):
 
         logits = self.out_head(x)
         return logits
+
+class GPTDatasetV1(Dataset):
+
+    def __init__(self, txt, tokenizer, max_length, stride):
+        """Uses a  sliding window to chunk the text into overlapping sequences of max_length"""
+        self.input_ids = []
+        self.target_ids = []
+
+        token_ids = tokenizer.encode(txt, allowed_special={"<|endoftext|>"})
+
+        for i in range(0, len(token_ids) - max_length, stride):
+            input_chunk = token_ids[i:i + max_length]
+            target_chunk = token_ids[i + 1: i + max_length + 1]
+            self.input_ids.append(torch.tensor(input_chunk))
+            self.target_ids.append(torch.tensor(target_chunk))
+
+    def __len__(self):
+        """Returns total numbers of rows in dataset"""
+        return len(self.input_ids)
+
+    def __getitem__(self, index):
+        """Returns a single row from the dataset"""
+        return self.input_ids[index], self.target_ids[index]
