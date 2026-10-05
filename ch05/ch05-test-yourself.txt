@@ -1,0 +1,19 @@
+Quick questions on main concepts:
+    1. What is the primary purpose of the cross-entropy loss function in LLM training?
+    D. To measure the difference between the model's predictedprobability distribution of tokens and the 
+    actual distribution of tokens in the training data.
+
+    2. What is the purpose of temperature scaling in text generation?
+    A. To control the randomness and diversity of the generated text by adjusting the probability distribution of tokens.
+
+    3. What is the primary goal of pretraining an LLM?
+    C. To learn general language patterns and representations from massive amounts of text.
+
+    4. What is the main benefit of using pretrained weights from OpenAI for LLMs?
+    A. It eliminates the need for extensive and expensive pretraining from scratch.
+
+    5. What is the primary advantage of saving the model's state dictionary in PyTroch?
+    B. It allows you to load and reuse the trained model without retraining it from scratch.
+
+    
+    
