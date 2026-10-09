@@ -1,0 +1,21 @@
+Quick questions on main concepts:
+    1. The primary purpose of __________ is to train a model to recognize and predict specific class lables.
+    A. Classification-finetuning
+
+    2. What are the two main categories of finetuning for language models?
+    A. Instruction-finetuning and classification-finetuning
+
+    3. What is the purpose of padding text messages in the spam dataset?
+    A. To ensure that all text messages have the same length for batch processing.
+
+    4. What is the role of the padding token in the SpamDataset class?
+    D. To fill in the gaps in short text messages to match the length of the longest message.
+
+    5. Why is the last token of the GPT model chosen for classification-finetuning?
+    D. Because the last token accumulates information from all preceding tokens due to the causal attention mask.
+
+    6. What is the purpose of the cross entropy loss function in the spam classification task?
+    C. To measure the difference between the model's predicted probabilities and the actual class labels.
+
+    7. What is the significance of the model's accuracy on the test set?
+    A. It indicates how well the model generalizes to new, unseen data.
