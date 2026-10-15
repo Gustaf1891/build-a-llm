@@ -1,0 +1,18 @@
+Quick questions on main concepts:
+    1. What is the primary challenge that pretrained LLMs often face regarding instructions?
+    D. Struggling with specific instructions like grammar correction or voice conversion.
+
+    2. What is the key component in preparing a dataset for supervised Instruction fine-tuning?
+    C. Instruction-response pairs
+
+    3. What data format is commonly used for Instruction datasets due to its human and machine readability?
+    A. JSON
+
+    4. What is the purpose of a custom collate function in the context of instruction fine-tuning?
+    B. To handle the specific formatting and requirements of the instruction fine-tuning dataset.
+
+    5. What is the purpose of using ignore_index parameter(-100) in the custom collate function?
+    C. To exclude padding tokens from the loss calculation.
+
+    6. What is the purpose of saving the fine-tuned model's state dictionary?
+    C. To ssave the model's parameters for later use or reuse in other projects.
