@@ -44,7 +44,7 @@ The base architecture and the initial training and fine-tuning pipelines follow 
 - The validation set is small ([149] examples), so one example is about [0.67] percentage points. Differences between higher ranks are within noise.
 - The ablation covers one task and one dataset. Results may not transfer to harder tasks, which may need higher rank.
 
-## How to reproduce
+## How to reproduce 
 
 ```bash
 git clone https://github.com/Gustaf1891/build-a-llm.git
